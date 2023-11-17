@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Backup";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Backup</title>
+</head>
+<body>
+    <div>
+        <h2>Backup Cơ sở dữ liệu</h2>
+        <p>@ViewBag.Message</p>
+        <form method="post" action="@Url.Action("BackupDatabase", "Admin")">
+            <input type="submit" value="Backup" class="btn btn-primary" onclick="return confirm('Bạn có muốn backup cơ sở dữ liệu không?')" />
+        </form>
+    </div>
+</body>
+</html>
